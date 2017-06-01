@@ -3,7 +3,7 @@ import java.awt.*;
 public class Shot implements Runnable {
     private int shotSpeed = 10;
 
-    private int SHOT_WIDTH = 5;
+    private int SHOT_WIDTH = 2;
     private int SHOT_HEIGHT = 5; 
 
     private int x = 0;

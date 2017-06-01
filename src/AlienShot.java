@@ -1,6 +1,8 @@
 import java.awt.*;
 
-//shot by alien
+/**
+ * shot by Alien
+ */
 public class AlienShot implements Runnable {
 
 

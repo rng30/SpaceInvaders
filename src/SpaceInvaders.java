@@ -109,18 +109,31 @@ public class SpaceInvaders extends JFrame implements Runnable {
     public void update(Graphics g) {
         paint(g);
     }
+    
+    public void randAlienShot(){
+    	army.randomAlienShot();
+    }
 
     /**
      *
      */
     public void run() {
+    	int count = 0;
         while(true) {
             try {
                 Thread.sleep(gameSpeed);
             } catch(InterruptedException ie) {
                 //Ignore this exception
             }
+            //If the game is currently running, move the aliens
+            if (!paused) {
+                if (count >= 5) {
+                    randAlienShot();
+                    count = 0;
+                }
+            }
             repaint();//Update the screen
+            count ++;
 
         }
     }
